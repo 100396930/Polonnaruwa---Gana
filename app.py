@@ -1,6 +1,5 @@
 # # ලංකාවේ හැම එළවළුවම - FULL LIST - No Error
-search_query = st.text_input("🔍 එළවළු හොයන්න (ex: තක්කාලි)", "")
-
+search_query = st.text_input("Search", "")
 sinhala_map = {
     "බටු": "brinjal", "වම්බටු": "brinjal", "batu": "brinjal",
     "තක්කාලි": "tomato", "thakkali": "tomato",
