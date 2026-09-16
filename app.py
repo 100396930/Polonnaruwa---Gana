@@ -113,3 +113,29 @@ with coly:
     st.download_button("📥 Download PRO Prices CSV", df.to_csv(index=False), "pro_prices.csv")
 
 st.caption("Thoga Ganum = තොග ගැනුම් (Farmerගෙන් ගන්න), Thoga Vikunum = තොග විකුණුම්, Sillara Ganum = සිල්ලර කඩේ ගන්න, Sillara Vikunum = සිල්ලර විකුණුම්")
+import streamlit as st
+import pandas as pd
+import datetime
+import random
+
+st.set_page_config(page_title="Sahal Mas Malu PRO", page_icon="🍚", layout="wide")
+st.title("🍚 සහල් | 🍗 මස් | 🐟 මාලු - PRO MAX")
+st.caption(f"ගැනුම් | විකුණුම් | තොග | සිල්ලර | Daily Auto Update: {datetime.date.today()}")
+
+@st.cache_data(ttl=86400)
+def get_sahal_mas_malu():
+    random.seed(datetime.date.today().day)
+    def r(a,b): return random.randint(a,b)
+    def make(eng, sin, base):
+        tg = base - r(20,40)
+        tv = base - r(5,15)
+        sg = base + r(15,35)
+        sv = base + r(40,80)
+        lab = sv - tg
+        return [eng, sin, tg, tv, sg, sv, lab]
+
+    sahal = [
+        make("Nadu","Nadu Sahal",210), make("Samba","Samba Sahal",235),
+        make("Keeri Samba","Keeri Samba",320), make("Red Nadu","Rathu Nadu",215),
+        make("White Kekulu","Sudu Kekulu",205), make("Red Kekulu","Rathu Kekulu",210),
+        make("Motta Samba","Motta Samba",250), make("Suwandel
