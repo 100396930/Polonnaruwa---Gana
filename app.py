@@ -1,4 +1,4 @@
-# ලංකාවේ හැම එළවළුවම - FULL LIST - No Error
+# # ලංකාවේ හැම එළවළුවම - FULL LIST - No Error
 search_query = st.text_input("🔍 එළවළු හොයන්න (ex: තක්කාලි)", "")
 
 sinhala_map = {
@@ -33,4 +33,4 @@ if search_query:
             break
     filtered_df = df[df['Vegetable'].str.lower().str.contains(q, na=False)]
 else:
-    filtered_df = df
+    filtered_df = df හැම එළවළුවම - FULL LIST - No Error
