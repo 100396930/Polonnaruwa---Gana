@@ -2,9 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import random
-
 st.set_page_config(page_title="Lanka Super Kade", page_icon="💎", layout="wide")
-
 # --- STYLE ---
 st.markdown("""
 <style>
@@ -133,7 +131,6 @@ def get_sahal_mas_malu():
         sv = base + r(40,80)
         lab = sv - tg
         return [eng, sin, tg, tv, sg, sv, lab]
-
     sahal = [
         make("Nadu","Nadu Sahal",210), make("Samba","Samba Sahal",235),
         make("Keeri Samba","Keeri Samba",320), make("Red Nadu","Rathu Nadu",215),
