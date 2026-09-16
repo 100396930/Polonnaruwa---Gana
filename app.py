@@ -29,7 +29,14 @@ if search_query:
     for k, v in sinhala_map.items():
         if k in q:
             q = v
+               q = sinhala_map.get(q, q)
+    for k, v in sinhala_map.items():
+        if k in q:
+            q = v
             break
     filtered_df = df[df['Vegetable'].str.lower().str.contains(q, na=False)]
 else:
-    filtered_df = df හැම එළවළුවම - FULL LIST - No Error
+    filtered_df = df
+
+st.dataframe(filtered_df) 
+    
